@@ -1,1 +1,81 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+
+local Window = OrionLib:MakeWindow({Name = "GUNS RNG ", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+local Tab = Window:MakeTab({
+	Name = "Tab1",
+	Icon = "rbxassetid://4483345998",
+	PremiumOnly = false
+})
+
+local Section = Tab:AddSection({
+	Name = "Inf Potion "
+})
+
+Tab:AddButton({
+	Name = "SuperLuckPotion",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+OrionLib:MakeNotification({
+	Name = "SUBSCRIBE TO LIMBO_SCRIPTS ",
+	Content = "Notification content... what will it say??",
+	Image = "rbxassetid://4483345998",
+	Time = 20
+})
+
+Tab:AddButton({
+	Name = "MagicPotion", 
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "LuckPotion !",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+Tab:AddButton({
+	Name = "RollPotion!",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+
+Tab:AddButton({
+	Name = "SuperRollSpeedPotion",
+	Callback = function()
+      		print("button pressed")
+  	end    
+})
+
+-- Misc --
+local Section = Tab:AddSection({
+	Name = "Other"
+})
+
+Tab:AddSlider({
+	Name = "Walkspeed",
+	Min = 1,
+	Max = 500,
+	Default = 5,
+	Color = Color3.fromRGB(255,255,255),
+	Increment = 1,
+	ValueName = "Ws",
+	Callback = function(Value)
+game.Workspace.player.LocalPlayer.Character.Humanoid.WalkSpeed = value
+	end    
+})
+
+
+
+
+
+
 
